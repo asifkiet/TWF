@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:960px) {
+.prdDet {
+	padding-top:2%;
+}
+.prdOrdQty {
+	padding-top:2%;
+}
+}
+@media screen and (max-width:768px) {
+.prdDet {
+	padding-top:1%;
+}
+.prdOrdQty {
+	padding-top:1%;
+}
+}
+@media screen and (max-width:479px) {
+.prdDet {
+	padding-top:0;
+}
+.prdOrdQty {
+	padding-top:0;
+}
+.prdtHdr .logo {
+	width:20%
+}
+.prdtHdr .titleBox {
+	width:80%;
+	padding:10px;
+}
+.prdtHdr .titleBox .name {
+	font-size:100%;
+	width:55%;
+	padding-right:10px;
+}
+.titleBox .ordBtn {
+	width:45%;
+}
+.titleBox .ordBtn a {
+	width:100%;
+}
+.titleBox .ordBtn a span {
+	width:25%;
+	
+}
+.titleBox .ordBtn a span img {
+	max-width:100%;
+}
+.titleBox .ordBtn a cite {
+	width:75%;
+	padding:7px 0 0 5px;
+}
+
+}
+
+
+@media screen and (max-width:479px) {
+	.prdtHdr .titleBox .name {
+		width:85%;
+	}
+	.titleBox .ordBtn {
+		width:15%;
+	}
+	.titleBox .ordBtn a span {
+		width:100%;
+	}
+	.titleBox .ordBtn a cite {
+		display:none;
+	}
+}
+
+@media screen and (max-width:380px) {
+	.prdtHdr .logo {
+		width:30%;
+	}
+	.prdtHdr .titleBox {
+		width:70%;
+	}
+	
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Properties Example</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+	
+	    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+    	
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + position.timestamp                    + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+    function sendmail(){
+    	var query = window.location.search.substring(1);
+    	var bdy = '<h2>Please send us following items</h2><h3>'+ query +'</h3>';
+	window.plugin.email.open({
+    to:      ['hiratay@trueworldfoods.com'],
+    cc:      ['tnakamura@trueworldfoods.com'],
+   
+    subject: 'Order from Benihana store',
+    body:    bdy,
+    isHtml:  true
+});
+    
+    }
+    
+    function displayQuery(){
+    	var query = window.location.search.substring(1);
+    }
+    </script>
+  </head>
+  <body>
+    <p id="geolocation">Finding geolocation...</p>
+    <!-- START -->
+        <p>
+        	<div class="ordBtn"><a href="javascript:sendmail();">send email</a></div>
+        </p>
+        <p id="query"></p>
+  </body>
+</html>

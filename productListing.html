@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $.ajax({
+    type: "GET",
+    url: "product.xml",
+    dataType: "xml",
+    success: function(xml){
+    $(xml).find('Product').each(function(){
+	  var sImg = $(this).find('Image').text();
+      var sTitle = $(this).find('Title').text();
+      var sId = $(this).find('Id').text();
+	  var sPrice = $(this).find('Price').text();
+      $("<li></li>").html("<div class='listWrap'><div class='prdImg'><a href='#'><img src='images/products/" + sImg + "' alt=''></a></div><div class='prdDet'><a href='#'>" + sTitle + "</a><p>Price: <span>" + sPrice + "</span></p></div><div class='prdOrdQty'><input id='" + sId + "' name='' value='0' type='number' max='3'></div></div>").appendTo("#idPrdtListing");
+    });
+  },
+  error: function() {
+    alert("An error occurred while processing XML file.");
+  }
+  });
+});
+</script>
+</head>
+
+<body>
+<section class="wrapper">
+  <section class="mainCont">
+    <section class="mainBox"> 
+      
+      <!-- Product Listing screen start -->
+      <section class="prdtHdr">
+        <div class="logo"><img src="images/logoSm.png"  alt=""></div>
+        <div class="titleBox">
+          <div class="name">BENIHANA</div>
+          <div class="ordBtn"><a href="javascript:SendData();"><span></span><cite>order now</cite></a></div>
+        </div>
+      </section>
+      <ul class="prdtListing" id="idPrdtListing"></ul>
+      
+      <!-- Product Listing screen close --> 
+     
+    </section>
+  </section>
+</section>
+<script type="text/javascript">
+	$( document ).ready(function() {
+	});
+	function SendData(){
+		
+		var str='';
+		
+		if(parseInt($('#UZU300').val())>0){
+			
+		str = str +'@UZU300'+'__'+$('#UZU300').val();
+		}
+		if(parseInt($('#UNI413A').val())>0){
+		str = str +'@UNI413A'+'__'+$('#UNI413A').val();
+		}
+		if(parseInt($('#OOB300').val())>0){
+		str = str +'@OOB300'+'__'+$('#OOB300').val();
+		}
+		if(parseInt($('#FLU115').val())>0){
+		str = str +'@FLU115'+'__'+$('#FLU115').val();
+		}
+		if(parseInt($('#T35100').val())>0){
+		str = str +'@T35100'+'__'+$('#T35100').val();
+		}
+		if(parseInt($('#STB217').val())>0){
+		str = str +'@STB217'+'__'+$('#STB217').val();
+		}
+		if(parseInt($('#DAI1300').val())>0){
+		str = str +'@DAI1300'+'__'+$('#DAI1300').val();
+		}
+		if(parseInt($('#SA22902–N1').val())>0){
+		str = str +'@SA22902–N1'+'__'+$('#SA22902–N1').val();
+		}
+		
+		window.location.href="Location.html?"+str;
+	}
+</script>
+</body>
+</html>

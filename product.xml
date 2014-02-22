@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ProductList>
+	<Product>
+		<Image>Bass.jpg</Image>
+		<Title>STRIPED BASS</Title>
+		<Id>STB217</Id>
+		<Price>$15</Price>
+	</Product>
+	<Product>
+		<Image>T25130.jpg</Image>
+		<Title>YELLOWFIN TUNA LOIN</Title>
+		<Id>T35100</Id>
+		<Price>$10</Price>
+	</Product>
+	<Product>
+		<Image>SA22272.jpg</Image>
+		<Title>SALMON ATL FRM HC</Title>
+		<Id>SA22902–N1</Id>
+		<Price>$20</Price>
+	</Product>
+	<Product>
+		<Image>Fluke.jpg</Image>
+		<Title>FLUKE LARGE FROZEN</Title>
+		<Id>FLU115</Id>
+		<Price>$30</Price>
+	</Product>
+	<Product>
+		<Image>OOB300.jpg</Image>
+		<Title>OOBA PERILLA LEAF</Title>
+		<Id>OOB300</Id>
+		<Price>$18</Price>
+	</Product>
+	<Product>
+		<Image>blank.png</Image>
+		<Title>UNI WEST (SHIRANAMI)</Title>
+		<Id>UNI413A</Id>
+		<Price>$22</Price>
+	</Product>
+	<Product>
+		<Image>blank.png</Image>
+		<Title>UZURA PK</Title>
+		<Id>UZU300</Id>
+		<Price>$28</Price>
+	</Product>	
+</ProductList>
